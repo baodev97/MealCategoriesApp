@@ -1,3 +1,20 @@
 # Welcome to your Expo app 👋 - DEV With Thien Bao 97 
 
-
+- Getting Start with the APP & Outputting Meal Categories
+- Display Items in a Grid
+- Getting Started with the React Navigation Package
+- Implementing Navigation Between Two Screen
+- Setting the Default Screen
+- Understanding the useNavigation Hook
+- Working with Route Parameters To pass Data Between Screens
+- Displaying Meals 
+- Adding Images & Styling
+- Styling Screen Headers & Backgrounds
+- Setting Navigation options Dynamically
+- Adding & Configuring the Meal Details Screen
+- Outputting Content in the Meal Detail Screen
+- Finishing the Meal Detail Screen
+- Adding Header buttons
+- Adding, Configuring & Using Bottom tabs
+- Nesting Navigator
+- App Finishing Touches
