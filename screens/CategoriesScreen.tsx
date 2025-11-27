@@ -1,15 +1,15 @@
-import { Text, View } from "react-native";
+import { FlatList, Text } from "react-native";
 import { CATEGORIES } from "../data/dummy-data";
 
 function CategoriesScreen() {
   console.log(CATEGORIES);
 
   return (
-    <View>
-      {CATEGORIES.map((itemData) => 
-        <Text key={itemData.id}>{itemData.title}</Text>
-      )}
-    </View>
+    <FlatList
+      data={CATEGORIES}
+      renderItem={(itemData) => <Text>{itemData.item.title}</Text>}
+      keyExtractor={(item) => item.id}
+    />
   );
 }
 export default CategoriesScreen;
