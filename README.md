@@ -1,6 +1,8 @@
 # Welcome to your Expo app 👋 - DEV With Thien Bao 97 
 
 - Getting Start with the APP & Outputting Meal Categories
+   - Cho hiển thị List Danh sách từ Data 
+   - cearte CategoryGridTilte 
 - Display Items in a Grid
 - Getting Started with the React Navigation Package
 - Implementing Navigation Between Two Screen
@@ -18,3 +20,5 @@
 - Adding, Configuring & Using Bottom tabs
 - Nesting Navigator
 - App Finishing Touches
+-------------------------------------------------------------- 
+Note : Thấy được UI, UX từ đó mới phân tích dev.
