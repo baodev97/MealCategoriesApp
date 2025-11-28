@@ -7,6 +7,10 @@
 - Getting Started with the React Navigation Package
    - install package
 - Implementing Navigation Between Two Screen
+   - Create Meal Over view Screen
+   - use Onpress of Pressable component in CategoryTile
+   - Create function handlerOnPress in function rendeCategoryItem
+   - use naigation of NavigationContainer
 - Setting the Default Screen
 - Understanding the useNavigation Hook
 - Working with Route Parameters To pass Data Between Screens

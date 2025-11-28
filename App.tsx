@@ -2,8 +2,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar, StyleSheet } from "react-native";
 import CategoriesScreen from "./screens/CategoriesScreen";
+import MealOverviewScreen from "./screens/MealOverviewScreen";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+    MealsCatgories: undefined,
+    MealOverview:undefined
+}
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
 
@@ -13,6 +19,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
             <Stack.Screen name="MealsCatgories" component={CategoriesScreen}/>
+            <Stack.Screen name="MealOverview" component={MealOverviewScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>
