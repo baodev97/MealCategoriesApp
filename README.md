@@ -5,6 +5,7 @@
    - cearte CategoryGridTilte 
 - Display Items in a Grid
 - Getting Started with the React Navigation Package
+   - install package
 - Implementing Navigation Between Two Screen
 - Setting the Default Screen
 - Understanding the useNavigation Hook
