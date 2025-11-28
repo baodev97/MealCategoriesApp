@@ -10,7 +10,7 @@ type rendeCategoryItemProps = {
     id:string
 }
 
-type CategoriesScreenNavigationProp = NativeStackNavigationProp<RootStackParamList,'MealsCatgories'>
+type CategoriesScreenNavigationProp = NativeStackNavigationProp<RootStackParamList,'MealsCategories'>
 
 type CategoriesScreenProp = {
   navigation: CategoriesScreenNavigationProp;

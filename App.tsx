@@ -5,7 +5,7 @@ import CategoriesScreen from "./screens/CategoriesScreen";
 import MealOverviewScreen from "./screens/MealOverviewScreen";
 
 export type RootStackParamList = {
-    MealsCatgories: undefined,
+    MealsCategories: undefined,
     MealOverview:undefined
 }
 
@@ -17,8 +17,8 @@ export default function App() {
     <>
       <StatusBar barStyle={"dark-content"} />
       <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name="MealsCatgories" component={CategoriesScreen}/>
+        <Stack.Navigator initialRouteName="MealsCategories">
+            <Stack.Screen name="MealsCategories" component={CategoriesScreen}/>
             <Stack.Screen name="MealOverview" component={MealOverviewScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
