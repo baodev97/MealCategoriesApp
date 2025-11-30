@@ -44,10 +44,14 @@ export default function MealOverviewScreen({ route, navigation}: MealOverviewScr
         imageUrl:itemData.imageUrl,
         duration:itemData.duration,
         complexity:itemData.complexity,
-        affordability:itemData.affordability
+        affordability:itemData.affordability,
+        id:itemData.id
     }
     return <MealItem {...mealItemProps}/>
   }
+
+
+
   
   useLayoutEffect(()=>{
     const categoryTitle = CATEGORIES.find((category) => category.id === catId)?.title

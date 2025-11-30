@@ -1,4 +1,13 @@
-import { Image, Platform, Pressable, StyleSheet, Text, View } from "react-native";
+import { MealDetailNavigationProp } from "@/screens/MealDetailScreen";
+import { useNavigation } from "@react-navigation/native";
+import {
+    Image,
+    Platform,
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+} from "react-native";
 
 type MealItemProps = {
   title: string;
@@ -6,6 +15,7 @@ type MealItemProps = {
   complexity: string;
   imageUrl: string;
   duration: number;
+  id: string;
 };
 function MealItem({
   title,
@@ -13,13 +23,19 @@ function MealItem({
   affordability,
   complexity,
   duration,
+  id,
 }: MealItemProps) {
+  const navigation = useNavigation<MealDetailNavigationProp>();
+  function handleOnpressMeal() {
+    navigation.navigate("MealDetail", { mealId: id });
+  }
   return (
     <View style={styles.mealItem}>
-      <Pressable android_ripple={{color:"#ccc"}}
-      style={({ pressed }) => [
-          pressed ? styles.buttonPressed : null,
-        ]}>
+      <Pressable
+        android_ripple={{ color: "#ccc" }}
+        style={({ pressed }) => [pressed ? styles.buttonPressed : null]}
+        onPress={handleOnpressMeal}
+      >
         <View style={styles.innerMealItem}>
           <View>
             <Image source={{ uri: imageUrl }} style={styles.image} />
@@ -41,7 +57,7 @@ const styles = StyleSheet.create({
   mealItem: {
     margin: 16,
     borderRadius: 8,
-    overflow: Platform.OS === 'android'? 'hidden':'visible',
+    overflow: Platform.OS === "android" ? "hidden" : "visible",
     backgroundColor: "white",
     elevation: 4,
     shadowColor: "black",
@@ -49,9 +65,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 8,
   },
-  innerMealItem:{
-    borderRadius:8,
-    overflow:'hidden'
+  innerMealItem: {
+    borderRadius: 8,
+    overflow: "hidden",
   },
   image: {
     width: "100%",
