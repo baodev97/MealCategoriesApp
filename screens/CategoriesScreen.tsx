@@ -20,7 +20,7 @@ type CategoriesScreenProp = {
 function CategoriesScreen({navigation}:CategoriesScreenProp) {
   function rendeCategoryItem (item:rendeCategoryItemProps){
   function handlerOnPress (){
-    navigation.navigate('MealOverview');
+    navigation.navigate('MealOverview',{categoryId:item.id});
   }
   return <CategoryGridTilte title={item.title} color={item.color} onPress={handlerOnPress}/>
 }

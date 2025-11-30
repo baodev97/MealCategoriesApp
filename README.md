@@ -14,6 +14,7 @@
 - Setting the Default Screen
 - Understanding the useNavigation Hook
 - Working with Route Parameters To pass Data Between Screens
+   - use route parameters To pass Data between Screens
 - Displaying Meals
 - Adding Images & Styling
 - Styling Screen Headers & Backgrounds
