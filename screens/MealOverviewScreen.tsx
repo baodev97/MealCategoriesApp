@@ -3,7 +3,7 @@ import MealItem from "@/components/MealItem";
 import { CATEGORIES, MEALS } from "@/data/dummy-data";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
 type MealOverviewRouteProp = RouteProp<RootStackParamList, "MealOverview">;
@@ -49,7 +49,7 @@ export default function MealOverviewScreen({ route, navigation}: MealOverviewScr
     return <MealItem {...mealItemProps}/>
   }
   
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     const categoryTitle = CATEGORIES.find((category) => category.id === catId)?.title
 
   navigation.setOptions({title:categoryTitle})
