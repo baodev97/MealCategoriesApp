@@ -35,7 +35,7 @@ export default function MealOverviewScreen({ route }: MealOverviewScreenProps) {
   });
 
   function renderMealItem(itemData:MealItem){
-    return <MealItem title={itemData.title}/>
+    return <MealItem title={itemData.title} imageUrl={itemData.imageUrl}/>
   }
   
   return (
