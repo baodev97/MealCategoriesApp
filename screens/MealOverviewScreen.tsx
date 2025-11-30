@@ -1,13 +1,16 @@
 import { RootStackParamList } from "@/App";
 import MealItem from "@/components/MealItem";
-import { MEALS } from "@/data/dummy-data";
+import { CATEGORIES, MEALS } from "@/data/dummy-data";
 import { RouteProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { FlatList, StyleSheet, View } from "react-native";
 
 type MealOverviewRouteProp = RouteProp<RootStackParamList, "MealOverview">;
+type MealOverviewScreenNavigationProp = NativeStackNavigationProp<RootStackParamList,'MealOverview'>
 
 type MealOverviewScreenProps = {
   route: MealOverviewRouteProp;
+  navigation:MealOverviewScreenNavigationProp
 };
 
 export type MealItem = {
@@ -27,12 +30,16 @@ export type MealItem = {
 };
 
 
-export default function MealOverviewScreen({ route }: MealOverviewScreenProps) {
+export default function MealOverviewScreen({ route, navigation}: MealOverviewScreenProps) {
   const catId = route.params?.categoryId;
 
   const displayedMeals = MEALS.filter((item) => {
     return item.categoryIds.indexOf(catId) >= 0;
   });
+
+  const categoryTitle = CATEGORIES.find((category) => category.id === catId)?.title
+
+  navigation.setOptions({title:categoryTitle})
 
   function renderMealItem(itemData:MealItem){ 
     const mealItemProps = {
