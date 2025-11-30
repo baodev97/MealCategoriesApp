@@ -34,8 +34,15 @@ export default function MealOverviewScreen({ route }: MealOverviewScreenProps) {
     return item.categoryIds.indexOf(catId) >= 0;
   });
 
-  function renderMealItem(itemData:MealItem){
-    return <MealItem title={itemData.title} imageUrl={itemData.imageUrl}/>
+  function renderMealItem(itemData:MealItem){ 
+    const mealItemProps = {
+        title:itemData.title,
+        imageUrl:itemData.imageUrl,
+        duration:itemData.duration,
+        complexity:itemData.complexity,
+        affordability:itemData.affordability
+    }
+    return <MealItem {...mealItemProps}/>
   }
   
   return (
