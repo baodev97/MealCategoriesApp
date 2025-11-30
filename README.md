@@ -20,6 +20,7 @@
 - Styling Screen Headers & Backgrounds
 - Setting Navigation options Dynamically
 - Adding & Configuring the Meal Details Screen
+   - Create Meal Detail Screen
 - Outputting Content in the Meal Detail Screen
 - Finishing the Meal Detail Screen
 - Adding Header buttons
