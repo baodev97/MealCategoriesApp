@@ -25,15 +25,16 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
 
 
   function headerButtonPressHandler(){
-    console.log("Pressed!")
+     console.log("Pressed!")
   }
+
   useLayoutEffect(()=>{
     navigation.setOptions({
         headerRight:()=>{
             return <Button title="Tap me" onPress={headerButtonPressHandler}/>
         }
     })
-  });
+  },[navigation,headerButtonPressHandler]);
 
   return (
     <ScrollView style={styles.rootContainer}>
