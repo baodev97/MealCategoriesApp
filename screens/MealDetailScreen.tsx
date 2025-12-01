@@ -5,7 +5,7 @@ import MealDetail from "@/components/MealDetails";
 import { MEALS } from "@/data/dummy-data";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 type MealDetailRouteProp = RouteProp<RootStackParamList, "MealDetail">;
 export type MealDetailNavigationProp = NativeStackNavigationProp<
@@ -23,7 +23,7 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   return (
-    <View>
+    <ScrollView style={styles.rootContainer}>
       <Image source={{ uri: selectedMeal?.imageUrl }} style={styles.image} />
       <Text style={styles.title}>{selectedMeal?.title}</Text>
       <View>
@@ -34,17 +34,24 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
           textStyle={styles.textMealDetail}
         />
       </View>
-      <SubTitle>Ingredients</SubTitle>
-      <List data={selectedMeal?.ingredients} />
-      <SubTitle>Steps</SubTitle>
-      <List data={selectedMeal?.steps} />
-    </View>
+      <View style={styles.listOutnerContainer}>
+        <View style={styles.listContainer}>
+          <SubTitle>Ingredients</SubTitle>
+          <List data={selectedMeal?.ingredients} />
+          <SubTitle>Steps</SubTitle>
+          <List data={selectedMeal?.steps} />
+        </View>
+      </View>
+    </ScrollView>
   );
 }
 
 export default MealDetailScreen;
 
 const styles = StyleSheet.create({
+  rootContainer: {
+    marginBottom: 32
+  },
   image: {
     width: "100%",
     height: 350,
@@ -58,5 +65,11 @@ const styles = StyleSheet.create({
   },
   textMealDetail: {
     color: "white",
+  },
+  listOutnerContainer: {
+    alignItems: "center",
+  },
+  listContainer: {
+    width: "80%",
   },
 });
