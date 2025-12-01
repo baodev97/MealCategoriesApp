@@ -23,12 +23,13 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
   return (
     <View>
       <Image source={{ uri: selectedMeal?.imageUrl }} style={styles.image} />
-      <Text>{selectedMeal?.title}</Text>
+      <Text style={styles.title}>{selectedMeal?.title}</Text>
       <View>
         <MealDetail
           duration={selectedMeal?.duration}
           complexity={selectedMeal?.complexity}
           affordability={selectedMeal?.affordability}
+          textStyle={styles.textMealDetail}
         />
       </View>
       <Text>Ingredients</Text>
@@ -48,6 +49,16 @@ export default MealDetailScreen;
 const styles = StyleSheet.create({
   image: {
     width: "100%",
-    height: 200,
+    height: 350,
   },
+  title:{
+    fontSize:18,
+    fontWeight:'bold',
+    margin:8,
+    textAlign:'center',
+    color:'white'
+  },
+  textMealDetail:{
+    color:'white'
+  }
 });
