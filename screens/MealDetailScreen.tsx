@@ -1,4 +1,5 @@
 import { RootStackParamList } from "@/App";
+import IconButton from "@/components/IconButton";
 import List from "@/components/MealDetail/List";
 import SubTitle from "@/components/MealDetail/Subtitle";
 import MealDetail from "@/components/MealDetails";
@@ -6,7 +7,7 @@ import { MEALS } from "@/data/dummy-data";
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useLayoutEffect } from "react";
-import { Button, Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 type MealDetailRouteProp = RouteProp<RootStackParamList, "MealDetail">;
 export type MealDetailNavigationProp = NativeStackNavigationProp<
@@ -31,7 +32,7 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
   useLayoutEffect(()=>{
     navigation.setOptions({
         headerRight:()=>{
-            return <Button title="Tap me" onPress={headerButtonPressHandler}/>
+            return <IconButton onPress={headerButtonPressHandler}/>
         }
     })
   },[navigation,headerButtonPressHandler]);
