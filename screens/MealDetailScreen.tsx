@@ -1,4 +1,6 @@
 import { RootStackParamList } from "@/App";
+import List from "@/components/MealDetail/List";
+import SubTitle from "@/components/MealDetail/Subtitle";
 import MealDetail from "@/components/MealDetails";
 import { MEALS } from "@/data/dummy-data";
 import { RouteProp } from "@react-navigation/native";
@@ -32,14 +34,10 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
           textStyle={styles.textMealDetail}
         />
       </View>
-      <Text>Ingredients</Text>
-      {selectedMeal?.ingredients.map((ingredient: string) => (
-        <Text key={ingredient}>{ingredient}</Text>
-      ))}
-      <Text>Steps</Text>
-      {selectedMeal?.steps.map((step: string) => (
-        <Text key={step}>{step}</Text>
-      ))}
+      <SubTitle>Ingredients</SubTitle>
+      <List data={selectedMeal?.ingredients} />
+      <SubTitle>Steps</SubTitle>
+      <List data={selectedMeal?.steps} />
     </View>
   );
 }
@@ -51,14 +49,14 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 350,
   },
-  title:{
-    fontSize:18,
-    fontWeight:'bold',
-    margin:8,
-    textAlign:'center',
-    color:'white'
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    margin: 8,
+    textAlign: "center",
+    color: "white",
   },
-  textMealDetail:{
-    color:'white'
-  }
+  textMealDetail: {
+    color: "white",
+  },
 });
