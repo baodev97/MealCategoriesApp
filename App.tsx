@@ -1,9 +1,51 @@
-import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StatusBar, StyleSheet } from "react-native";
+import CategoriesScreen from "./screens/CategoriesScreen";
+import MealDetailScreen from "./screens/MealDetailScreen";
+import MealOverviewScreen from "./screens/MealOverviewScreen";
+
+export type RootStackParamList = {
+  MealsCategories: undefined;
+  MealOverview: { categoryId: string } | undefined;
+  MealDetail: { mealId: string } | undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Hello Expo!</Text>
-    </View>
+    <>
+      <StatusBar barStyle={"light-content"} />
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="MealsCategories"
+          screenOptions={{
+            headerStyle: { backgroundColor: "#24180f" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#845b3cff" },
+          }}
+        >
+          <Stack.Screen
+            name="MealsCategories"
+            component={CategoriesScreen}
+            options={{
+              title: "All Categories",
+            }}
+          />
+          <Stack.Screen name="MealOverview" component={MealOverviewScreen} />
+          <Stack.Screen
+            name="MealDetail"
+            component={MealDetailScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
+const styles = StyleSheet.create({
+  app: {
+    backgroundColor: "#24180f",
+  },
+  container: {},
+});

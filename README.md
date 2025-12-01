@@ -1,20 +1,31 @@
 # Welcome to your Expo app 👋 - DEV With Thien Bao 97 
 
 - Getting Start with the APP & Outputting Meal Categories
+   - Cho hiển thị List Danh sách từ Data 
+   - cearte CategoryGridTilte 
 - Display Items in a Grid
 - Getting Started with the React Navigation Package
+   - install package
 - Implementing Navigation Between Two Screen
+   - Create Meal Over view Screen
+   - use Onpress of Pressable component in CategoryTile
+   - Create function handlerOnPress in function rendeCategoryItem
+   - use naigation of NavigationContainer
 - Setting the Default Screen
 - Understanding the useNavigation Hook
 - Working with Route Parameters To pass Data Between Screens
-- Displaying Meals 
+   - use route parameters To pass Data between Screens
+- Displaying Meals
 - Adding Images & Styling
 - Styling Screen Headers & Backgrounds
 - Setting Navigation options Dynamically
 - Adding & Configuring the Meal Details Screen
+   - Create Meal Detail Screen
 - Outputting Content in the Meal Detail Screen
 - Finishing the Meal Detail Screen
 - Adding Header buttons
 - Adding, Configuring & Using Bottom tabs
 - Nesting Navigator
 - App Finishing Touches
+-------------------------------------------------------------- 
+Note : Thấy được UI, UX từ đó mới phân tích dev.
