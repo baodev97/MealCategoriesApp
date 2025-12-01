@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StatusBar, StyleSheet } from "react-native";
+import { Button, StatusBar, StyleSheet } from "react-native";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import MealOverviewScreen from "./screens/MealOverviewScreen";
@@ -8,7 +8,7 @@ import MealOverviewScreen from "./screens/MealOverviewScreen";
 export type RootStackParamList = {
   MealsCategories: undefined;
   MealOverview: { categoryId: string } | undefined;
-  MealDetail:{mealId:string}| undefined
+  MealDetail: { mealId: string } | undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,11 +33,19 @@ export default function App() {
               title: "All Categories",
             }}
           />
+          <Stack.Screen name="MealOverview" component={MealOverviewScreen} />
           <Stack.Screen
-            name="MealOverview"
-            component={MealOverviewScreen}
+            name="MealDetail"
+            component={MealDetailScreen}
+            options={{
+              headerRight: () => (
+                <Button
+                  title="Tap me"
+                  onPress={() => console.log("pressed!")}
+                />
+              ),
+            }}
           />
-          <Stack.Screen name="MealDetail" component={MealDetailScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>
