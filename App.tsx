@@ -11,7 +11,9 @@ export type RootStackParamList = {
   MealDetail: { mealId: string } | undefined;
 };
 
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
 
 export default function App() {
   return (

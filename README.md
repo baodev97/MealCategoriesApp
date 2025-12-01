@@ -24,6 +24,9 @@
 - Outputting Content in the Meal Detail Screen
 - Finishing the Meal Detail Screen
 - Adding Header buttons
+- Adding an Icon Button to a Header
+- Adding drawer Navigation & Creating a Drawer
+- Configuring the Drawer Navgator & the Drawer
 - Adding, Configuring & Using Bottom tabs
 - Nesting Navigator
 - App Finishing Touches
