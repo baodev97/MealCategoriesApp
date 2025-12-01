@@ -31,6 +31,14 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
           affordability={selectedMeal?.affordability}
         />
       </View>
+      <Text>Ingredients</Text>
+      {selectedMeal?.ingredients.map((ingredient: string) => (
+        <Text key={ingredient}>{ingredient}</Text>
+      ))}
+      <Text>Steps</Text>
+      {selectedMeal?.steps.map((step: string) => (
+        <Text key={step}>{step}</Text>
+      ))}
     </View>
   );
 }
