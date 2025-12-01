@@ -32,3 +32,24 @@
 - App Finishing Touches
 -------------------------------------------------------------- 
 Note : Thấy được UI, UX từ đó mới phân tích dev.
+
+
+
+-----------------------------------------------------------
+App-wide state Management with redux & context API 
+
+- Getting Started with React's Context API 
+
+- Managing App - wide state with Context 
+
+- Using the Created Context with useContext
+
+- Managing Favorite meals with the Context API
+
+- Getting Started with Redux & redux toolkit 
+
+- Working with redux Slices 
+
+- Managing Redux state & Dispatching Actions
+
+- Using Redux State in components 
