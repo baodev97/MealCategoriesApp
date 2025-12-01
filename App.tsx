@@ -44,7 +44,7 @@ export default function App() {
         >
           <Stack.Screen
             name="MealsCategories"
-            component={CategoriesScreen}
+            component={DrawerNavigator}
             options={{
               title: "All Categories",
             }}
