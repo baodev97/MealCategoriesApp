@@ -24,8 +24,33 @@
 - Outputting Content in the Meal Detail Screen
 - Finishing the Meal Detail Screen
 - Adding Header buttons
+- Adding an Icon Button to a Header
+- Adding drawer Navigation & Creating a Drawer
+- Configuring the Drawer Navgator & the Drawer
 - Adding, Configuring & Using Bottom tabs
 - Nesting Navigator
 - App Finishing Touches
 -------------------------------------------------------------- 
 Note : Thấy được UI, UX từ đó mới phân tích dev.
+
+
+
+-----------------------------------------------------------
+App-wide state Management with redux & context API 
+
+- Getting Started with React's Context API 
+   - init create context 
+
+- Managing App - wide state with Context 
+
+- Using the Created Context with useContext
+
+- Managing Favorite meals with the Context API
+
+- Getting Started with Redux & redux toolkit 
+
+- Working with redux Slices 
+
+- Managing Redux state & Dispatching Actions
+
+- Using Redux State in components
