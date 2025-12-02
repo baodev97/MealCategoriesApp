@@ -7,7 +7,9 @@ import CategoriesScreen from "./screens/CategoriesScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import MealOverviewScreen from "./screens/MealOverviewScreen";
-import FavoritesContextProvider from './store/context/favorites-context';
+// import FavoritesContextProvider from './store/context/favorites-context';
+import { Provider } from 'react-redux';
+import store from './store/redux/store';
 
 export type RootStackParamList = {
   MealsCategories: undefined;
@@ -49,7 +51,8 @@ export default function App() {
   return (
     <>
       <StatusBar barStyle={"light-content"} />
-      <FavoritesContextProvider>
+      {/* <FavoritesContextProvider> */}
+      <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="MealsCategories"
@@ -73,7 +76,8 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-      </FavoritesContextProvider>
+      {/* </FavoritesContextProvider> */}
+      </Provider>
     </>
   );
 }
