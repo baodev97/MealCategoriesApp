@@ -17,7 +17,7 @@ export type RootStackParamList = {
   MealDetail: { mealId: string };
 };
 export type RootDrawerParamList = {
-  MealsCategories: undefined;
+  AllMealsCategories: undefined;
   MealsFavarioty:undefined;
 };
 
@@ -36,7 +36,7 @@ function DrawerNavigator(){
       drawerActiveTintColor:'#2a1504ff',
       drawerActiveBackgroundColor:'#f4d8c2ff'
     }}>
-      <Drawer.Screen name="MealsCategories" component={CategoriesScreen} options={{
+      <Drawer.Screen name="AllMealsCategories" component={CategoriesScreen} options={{
         title:'All categories',
         drawerIcon:({size, color})=> <Ionicons size={size} color={color} name='list'/>
       }}/>

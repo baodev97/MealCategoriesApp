@@ -42,6 +42,8 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
     //  }else{
     //   favoriteMealCtx.addFavorite(mealId)
     //  }
+    console.log("press")
+    console.log(mealIsFavotite,"check meal is Favotite")
     if(mealIsFavotite){
       dispatch(removefavorite({id:mealId}))
     }else{
