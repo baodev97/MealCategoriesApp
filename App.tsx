@@ -7,6 +7,7 @@ import CategoriesScreen from "./screens/CategoriesScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import MealOverviewScreen from "./screens/MealOverviewScreen";
+import FavoritesContextProvider from './store/context/favorites-context';
 
 export type RootStackParamList = {
   MealsCategories: undefined;
@@ -48,6 +49,7 @@ export default function App() {
   return (
     <>
       <StatusBar barStyle={"light-content"} />
+      <FavoritesContextProvider>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="MealsCategories"
@@ -71,6 +73,7 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
+      </FavoritesContextProvider>
     </>
   );
 }
