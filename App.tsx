@@ -12,7 +12,7 @@ import FavoritesContextProvider from './store/context/favorites-context';
 export type RootStackParamList = {
   MealsCategories: undefined;
   MealOverview: { categoryId: string } | undefined;
-  MealDetail: { mealId: string } | undefined;
+  MealDetail: { mealId: string };
 };
 export type RootDrawerParamList = {
   MealsCategories: undefined;
