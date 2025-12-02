@@ -9,7 +9,7 @@ import MealDetailScreen from "./screens/MealDetailScreen";
 import MealOverviewScreen from "./screens/MealOverviewScreen";
 // import FavoritesContextProvider from './store/context/favorites-context';
 import { Provider } from 'react-redux';
-import store from './store/redux/store';
+import { store } from './store/redux/store';
 
 export type RootStackParamList = {
   MealsCategories: undefined;
