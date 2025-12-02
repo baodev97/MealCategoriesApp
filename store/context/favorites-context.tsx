@@ -18,8 +18,12 @@ type FavoritesContextProviderProps = {
 
 function FavoritesContextProvider({ children }: FavoritesContextProviderProps) {
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  function addFavorite(id: string) {}
-  function removeFavorite(id: string) {}
+  function addFavorite(id: string) {
+    setFavoriteIds((currentFavIds)=> [...currentFavIds,id]);
+  }
+  function removeFavorite(id: string) {
+    setFavoriteIds((currentFavIds)=> currentFavIds.filter(mealId => mealId !== id));
+  }
   const value: FavoritesContextType = {
     ids: favoriteIds,
     addFavorite,
