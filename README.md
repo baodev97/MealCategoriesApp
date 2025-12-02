@@ -39,6 +39,7 @@ Note : Thấy được UI, UX từ đó mới phân tích dev.
 App-wide state Management with redux & context API 
 
 - Getting Started with React's Context API 
+   - init create context 
 
 - Managing App - wide state with Context 
 
@@ -52,4 +53,4 @@ App-wide state Management with redux & context API
 
 - Managing Redux state & Dispatching Actions
 
-- Using Redux State in components 
+- Using Redux State in components
